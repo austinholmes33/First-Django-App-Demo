@@ -1,9 +1,15 @@
 {% extends 'base.html' %}
-
+{% load static %}
 {% block title %}About{% endblock %}
 
 {% block content %}
-
-{{ my_name }}
+<div class="card" style="width: 18rem; margin: 100px;">
+    <img src="{% static 'images/django.png' %}" class="card-img-top" alt="Card Image cap">
+    <div class="card-body">
+      <h5 class="card-title">About</h5>
+      <p class="card-text">First Django App</p>
+      <a href="{% url 'home' %}" class="btn btn-dark">Return Home</a>
+    </div>
+</div>
 
 {% endblock %}
